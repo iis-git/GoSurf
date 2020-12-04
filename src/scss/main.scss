@@ -1,0 +1,27 @@
+@import "../../node_modules/normalize.css/normalize.css";
+@import "tools/variables";
+@import "tools/mixins";
+
+@import "design-tokens/typography";
+@import "settings/general";
+
+//vendors
+@import "design-tokens/fonts";
+@import "../../node_modules/@glidejs/glide/src/assets/sass/glide.core";
+@import "vendors/glide-slider";
+
+
+// ui
+//@import "ui/buttons";
+
+// layouts
+@import "layouts/header";
+@import "layouts/footer";
+
+// blocks
+
+
+
+// Components
+@import "../components/hero/src/scss/main";
+

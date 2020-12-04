@@ -1,0 +1,133 @@
+.button {
+  @include resetBtn;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid;
+  border-radius: var(--border-radius);
+  cursor: pointer;
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: none;
+  }
+
+  &:focus {
+    border-color: #8bbafe;
+    outline: 0;
+    box-shadow: 0 0 0 .25rem rgba(13,110,253,.25);
+  }
+
+  svg {
+    margin-right: 8px;
+  }
+
+  &_accent {
+    background-color: var(--accent-color-alt);
+    border-color: var(--accent-color-alt);
+    color: #fff;
+    transition: var(--transition-time);
+
+    &:hover {
+      background-color: transparent;
+      color: var(--accent-color-alt);
+      border-color: var(--accent-color-alt);
+    }
+
+    &.button_icon {
+      transition: var(--transition-time);
+
+      svg {
+        fill: #fff;
+        transition: var(--transition-time);
+      }
+
+      &:hover {
+        svg {
+          fill: var(--accent-color)!important;
+        }
+      }
+    }
+  }
+
+  &_muted {
+    background-color: var(--muted-accent-color);
+    border-color: var(--accent-color);
+    color: var(--accent-text-color);
+
+    &.button_icon {
+
+      & + span {
+        margin-bottom: 2px;
+      }
+
+      svg {
+        fill: var(--accent-text-color);
+        transition: var(--transition-time);
+      }
+    }
+  }
+
+  &_outlined {
+    background-color: var(--muted-accent-color);
+    border-color: var(--accent-color);
+    color: var(--accent-text-color);
+
+    &:hover {
+      background-color: var(--accent-color);
+      border-color: var(--accent-color);
+      color: #fff;
+      transition: var(--transition-time);
+    }
+
+    &.button_icon {
+      transition: var(--transition-time);
+
+      svg {
+        fill: var(--accent-color);
+        transition: var(--transition-time);
+
+        & + span {
+          margin-bottom: 2px;
+        }
+      }
+
+      &:hover {
+        svg {
+          fill: #fff!important;
+        }
+      }
+    }
+  }
+
+  &_size {
+    &_s {
+      font-size: 14px;
+      padding: 4px .85em;
+      min-height: 34px;
+    }
+
+    &_m {
+      font-size: 14px;
+      padding: 12px 22px 11px;
+    }
+
+    &_l {
+      font-size: 16px;
+      padding: 15px 32px 14px;
+    }
+  }
+}
+
+.request-button {
+  min-width: auto;
+  font-size: 11px;
+  min-height: auto;
+
+  @include media-breakpoint-up(sm) {
+    min-width: 158px;
+    font-size: 14px;
+    min-height: 34px;
+  }
+}

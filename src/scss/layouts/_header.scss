@@ -1,0 +1,114 @@
+.page-header {
+  position: fixed;
+  z-index: 2;
+  left: 0;
+  top: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  height: 100vh;
+  border: 2px solid var(--main-text-color);
+  padding: 0 0 25px;
+  margin: 0;
+
+  &__logo  {
+    margin-bottom: 20px;
+
+
+    svg {
+    width: 120px;
+    height: 200px;
+    }
+  }
+
+}
+
+.page-nav {
+
+  &__list {
+    @include listReset;
+
+  }
+
+  &__item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px;
+
+    &--surf {
+      &::before {
+        content: url("../images/nav-icon-surf.svg");
+        width: 58px;
+        height: 50px;
+
+      }
+    }
+    &--travel {
+      &::before {
+        content: url("../images/nav-icon-travel.svg");
+        height: 35px;
+      }
+    }
+    &--sleep {
+      &::before {
+        content: url("../images/nav-icon-camp.svg");
+        height: 43px;
+      }
+    }
+    &--shop {
+      &::before {
+        content: url("../images/nav-icon-surfboard.svg");
+        height: 45px;
+      }
+    }
+  }
+}
+
+.date {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  text-align: center;
+
+  &__day {
+    font-weight: 800;
+    font-size: 72px;
+    line-height: 1;
+    width: 100%;
+  }
+
+  &__month {
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 0.8;
+    opacity: var(--accent-color-alt);
+    padding-right: 5px;
+    border-right: 1px solid var(--main-text-color);
+  }
+
+  &__year {
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 0.8;
+
+    opacity: var(--accent-color-alt);
+    padding-left: 5px;
+  }
+}
+
+.location {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  opacity: var(--accent-color-alt);
+  padding-top: 10px;
+
+  &::before {
+    content: url("../images/marker.svg");
+    margin-bottom: -3px;
+    margin-right: 5px;
+  }
+}
+

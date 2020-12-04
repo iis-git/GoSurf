@@ -1,0 +1,53 @@
+.glide {
+
+  &__slides {
+    @include listReset;
+    transform: translate3d(0,0,0)!important;
+    width: 100vw!important;
+    height: 100vh;
+
+  }
+
+  &__slide {
+    opacity: 0;
+    z-index: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: opacity .4s ease;
+    height: 100vh;
+
+      &--active {
+        opacity: 1;
+        z-index: 1;
+      }
+    }
+
+  &__bullets {
+    display: flex;
+  }
+
+
+
+
+  &__arrows {
+    padding: 36px 75px;
+    z-index: 2;
+  }
+
+  &__arrow {
+    @include resetBtn;
+  }
+
+  &__arrow--left {
+    margin-right: 20px;
+  }
+}
+
+
+
+
+
+
+
+
